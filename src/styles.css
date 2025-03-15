@@ -1,0 +1,550 @@
+/* Estilos generales */
+body {
+  font-family: "Inter", sans-serif; /* Fuente moderna */
+  background-color: #f8f9fa; /* Fondo claro */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Contenedor principal */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-logo {
+  display: block; /* Hace que la imagen sea un bloque para que margin funcione */
+  margin: 0 auto; /* Centra horizontalmente */
+  max-width: 100%; /* Evita que la imagen se desborde */
+  height: auto;
+}
+
+
+/* Títulos */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/* Párrafos */
+p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+
+
+
+/* Botones de categoría */
+.category-button {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Asegura que el botón no fuerce saltos de línea */
+}
+
+.category-button:hover {
+  transform: translateY(-2px); /* Efecto de elevación */
+  opacity: 0.9;
+}
+
+/* Colores de los botones de categoría */
+.bg-green-500 {
+  background-color: #10b981; /* Verde */
+}
+
+.bg-orange-300 {
+  background-color: #f59e0b; /* Naranja claro */
+}
+
+.bg-orange-400 {
+  background-color: #f97316; /* Naranja */
+}
+
+.bg-orange-500 {
+  background-color: #ea580c; /* Naranja oscuro */
+}
+
+.bg-red-600 {
+  background-color: #dc2626; /* Rojo */
+}
+
+.bg-red-700 {
+  background-color: #b91c1c; /* Rojo oscuro */
+}
+
+.bg-red-900 {
+  background-color: #7f1d1d; /* Rojo muy oscuro */
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+  
+
+}
+
+/* Botones del modal */
+.modal-button {
+  width: 30%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 0px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.modal-button.selected {
+  background-color: #fcd34d; /* Amarillo */
+  color: #1a1a1a;
+}
+
+.modal-button.blue {
+  background-color: #3b82f6; /* Azul */
+}
+
+.modal-button.green {
+  background-color: #10b981; /* Verde */
+}
+
+.modal-button.red {
+  background-color: #dc2626; /* Rojo */
+}
+
+/* Resultados */
+.results-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/* Machine (Análisis) */
+.machine-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restoration-container {
+  padding: 20px;
+  background-color: #fcd34d; /* Verde claro */
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+
+
+.level-description-container {
+  padding: 20px;
+  background-color: #99ebf8;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* Listas */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #4a5568;
+}
+
+/* Blockquote (Oración de la Serenidad) */
+blockquote {
+  font-style: italic;
+  color: #4a5568;
+  margin-top: 15px;
+  padding-left: 20px;
+  border-left: 4px solid #10b981; /* Verde */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .category-button {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .modal-button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+.right-aligned {
+  text-align: left;
+  font-weight: bold;
+  font-style: italic;
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
+
+
+
+
+/* Botones en blanco y negro */
+.black-white-button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.black-white-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* Texto entre los botones principales */
+.button-separator {
+  text-align: center;
+  font-size: 1rem;
+  color: #4a5568; /* Un gris oscuro para que sea legible */
+  margin: 10px 0;
+  font-style: italic;
+}
+
+
+/* ✅ Sección de compartir */
+.share-container {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.share-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.share-subtitle {
+  font-size: .8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.share-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.share-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #16cfec;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #f8f9fa;
+}
+
+.dark-mode .category-button {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+.mode-toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+.category-button {
+  background-color: initial; /* Color original definido en cada categoría */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.category-button.visited {
+  background-color: black !important; /* Cambia el color al ser visitado */
+  color: white !important; /* Asegura que el texto sea visible */
+}
+
+/* Estilos para la descripción dentro del botón */
+.category-description {
+  font-style: italic; /* Texto en cursiva */
+  font-size: 0.9em; /* Tamaño más pequeño */
+  color: #e0e0e0; /* Color gris claro para contraste */
+  margin-left: 5px; /* Espaciado a la izquierda */
+}
+
+
+/* Mantiene el color original de cada categoría */
+.category-button[data-category="AREA_DE_RESTAURACIÓN"] {
+  background-color: #e37c5c;
+}
+
+.category-button[data-category="FUGA_MENTAL"] {
+  background-color: #16cfec;
+}
+
+.category-button[data-category="ANSIEDAD"] {
+  background-color: #1cacce;
+}
+
+.category-button[data-category="TENSION"] {
+  background-color: #228ab0;
+}
+
+.category-button[data-category="IRRITACION"] {
+  background-color: #286793;
+}
+
+.category-button[data-category="GOLPE_EMOCIONAL"] {
+  background-color: #2e4575;
+}
+
+.category-button[data-category="ABANDONO"] {
+  background-color: #342257;
+  color: white;
+}
+
+/* Cuando el botón ha sido visitado, cambia de color */
+.category-button.visited {
+  background-color:  #b0b0b0 !important; /* Puedes cambiar el color */
+  color: white !important; /* Asegura que el texto siga visible */
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+
+/* Estilos generales para el modo oscuro */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+  color: #f8f9fa;
+}
+
+.dark-mode .category-button {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+.dark-mode .modal-content {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+.dark-mode .results-container,
+.dark-mode .machine-container,
+.dark-mode .restoration-container,
+.dark-mode .level-description-container {
+  background-color: #444;
+  color: #f8f9fa;
+}
+
+.dark-mode .gas-meter-container {
+  background-color: #444;
+  color: #f8f9fa;
+}
+
+.dark-mode .progress-bar {
+  background-color: #555;
+}
+
+.dark-mode .progress-bar-fill {
+  background-color: #16cfec;
+}
+
+.dark-mode .modal-button {
+  background-color: #555;
+  color: #f8f9fa;
+}
+
+.dark-mode .modal-button.red {
+  background-color: #dc2626;
+}
+
+.dark-mode .modal-button.blue {
+  background-color: #3b82f6;
+}
+
+.dark-mode .modal-button.green {
+  background-color: #10b981;
+}
+
+.dark-mode .share-container {
+  background-color: #444;
+  color: #f8f9fa;
+}
+
+.dark-mode .share-button {
+  background-color: #007bff;
+  color: #f8f9fa;
+}
+
+.dark-mode .share-button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode .category-button.visited {
+  background-color: #666 !important;
+  color: #f8f9fa !important;
+}
+
+
+
+/* Ajustar tamaño de los botones de preguntas en pantallas más grandes */
+@media (min-width: 768px) {
+  .modal-button {
+    width: 60%; /* Aumenta el ancho en pantallas grandes */
+    padding: 15px; /* Aumenta el padding */
+    font-size: 1rem; /* Hace el texto más grande */
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-button {
+    width: 70%; /* Aún más ancho en pantallas más grandes */
+    padding: 18px; /* Padding más grande */
+    font-size: 1.1rem; /* Letra más grande */
+  }
+}
+
